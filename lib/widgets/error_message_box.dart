@@ -1,3 +1,5 @@
+import 'dart:developer';
+
 import 'package:flutter/material.dart';
 
 class ErrorMessageBox extends StatelessWidget {
@@ -7,6 +9,7 @@ class ErrorMessageBox extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    log(errorMessage);
     return Container(
       padding: const EdgeInsets.all(12),
       decoration: BoxDecoration(

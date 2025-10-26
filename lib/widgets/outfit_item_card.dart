@@ -1,6 +1,7 @@
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:fashion_outfit/model/clothing_item.dart';
 import 'package:flutter/material.dart';
+import 'package:shimmer/shimmer.dart';
 
 class OutfitItemCard extends StatelessWidget {
   const OutfitItemCard({
@@ -26,10 +27,11 @@ class OutfitItemCard extends StatelessWidget {
             child: CachedNetworkImage(
               imageUrl: item.imageUrl,
               fit: BoxFit.cover,
-              placeholder: (context, url) => Container(
-                color: Colors.grey[200],
-                child: const Center(
-                  child: CircularProgressIndicator(),
+              placeholder: (context, url) => Shimmer.fromColors(
+                baseColor: Colors.grey[300]!,
+                highlightColor: Colors.grey[100]!,
+                child: Container(
+                  color: Colors.grey[300],
                 ),
               ),
               errorWidget: (context, url, error) => Container(

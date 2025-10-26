@@ -13,8 +13,7 @@ class GenerateButton extends StatelessWidget {
       onPressed: controller.isGenerating
           ? null
           : () async {
-              await controller.generateOutfits();
-              onUpdate();
+              await controller.generateOutfits(onUpdate);
             },
       style: ElevatedButton.styleFrom(
         backgroundColor: Colors.black87,

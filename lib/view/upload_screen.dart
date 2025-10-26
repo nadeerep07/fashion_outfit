@@ -1,3 +1,4 @@
+
 import 'package:fashion_outfit/widgets/detected_items_grid.dart';
 import 'package:fashion_outfit/widgets/error_message_box.dart';
 import 'package:fashion_outfit/widgets/generate_button.dart';
@@ -52,7 +53,7 @@ class _UploadScreenState extends State<UploadScreen> {
                   itemCount: _controller.detectedItems.isNotEmpty
                       ? _controller.detectedItems.length
                       : 4,
-                ), 
+                ),
               if (!_controller.isGenerating &&
                   _controller.detectedItems.isNotEmpty)
                 DetectedItemsGrid(items: _controller.detectedItems),
